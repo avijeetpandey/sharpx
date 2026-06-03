@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net8.0</TargetFrameworks>
+    <RootNamespace>SharpX</RootNamespace>
+    <AssemblyName>SharpX</AssemblyName>
+    <PackageId>SharpX</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>avijeetpandey</Authors>
+    <Description>SharpX is a production-ready, axios-style HTTP client for .NET. It provides interceptors, cancellation, automatic JSON/form serialization, transformers, and security hardening on top of HttpClient.</Description>
+    <PackageTags>http;client;axios;rest;api;json;interceptors;sharpx</PackageTags>
+    <RepositoryUrl>https://github.com/avijeetpandey/sharpx</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/avijeetpandey/sharpx</PackageProjectUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+</Project>
