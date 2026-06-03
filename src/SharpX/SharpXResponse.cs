@@ -3,7 +3,7 @@ using System.Net;
 namespace SharpX;
 
 /// <summary>
-/// Strongly-typed response returned by <see cref="SharpXClient"/>.
+/// Strongly-typed response returned by the SharpX client.
 /// </summary>
 /// <typeparam name="T">The deserialized data type.</typeparam>
 public sealed class SharpXResponse<T>
